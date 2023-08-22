@@ -14,7 +14,7 @@ const spas = [
 for (let spa of spas) {
     registerApplication({
         name: spa.name,
-        app: () => import(spa.module),
+        app: () => import(/* @vite-ignore */ spa.module),
         activeWhen: spa.activeWhen
     });
 }
